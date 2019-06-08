@@ -258,6 +258,7 @@
       <PreCompiledHeader>Use</PreCompiledHeader>
       <PreCompiledHeaderOutputFile>$(IntDir)\precomp.h.pch</PreCompiledHeaderOutputFile>
     </ClCompile>
+    <ClCompile Include="packet.c" />
     <ClCompile Include="precompsrc.c">
       <AdditionalIncludeDirectories>;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreCompiledHeaderFile>precomp.h</PreCompiledHeaderFile>

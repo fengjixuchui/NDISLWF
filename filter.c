@@ -1224,6 +1224,8 @@ Return Value:
         CurrNbl = NetBufferLists;
         while (CurrNbl)
         {
+            get_packet(CurrNbl, SendNetBufferListsCompleteHandler);
+
             NumOfSendCompletes++;
             CurrNbl = NET_BUFFER_LIST_NEXT_NBL(CurrNbl);
 
@@ -1317,6 +1319,8 @@ Arguments:
             CurrNbl = NetBufferLists;
             while (CurrNbl)
             {
+                get_packet(CurrNbl, SendNetBufferListsHandler);
+
                 pFilter->OutstandingSends++;
                 FILTER_LOG_SEND_REF(1, pFilter, CurrNbl, pFilter->OutstandingSends);
 
@@ -1400,6 +1404,8 @@ Arguments:
     {
         while (CurrNbl)
         {
+            get_packet(CurrNbl, ReturnNetBufferListsHandler);
+
             NumOfNetBufferLists ++;
             CurrNbl = NET_BUFFER_LIST_NEXT_NBL(CurrNbl);
         }
